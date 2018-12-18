@@ -1,4 +1,4 @@
-#IoT LoRa Microbit Node
+# IoT LoRa Microbit Node
 This repository contains the documentation for the IoT LoRa Gateway Node.
 
 You can view the python library at

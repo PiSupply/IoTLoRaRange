@@ -1,4 +1,4 @@
-#IoT LoRa Gateway Controller
+# IoT LoRa Gateway Controller
 
 New for our IoT LoRa Gateways, this software is designed to run on the host SBC
 This will allow you to manage and setup your gateway over the network with a simple to use web app.
@@ -12,7 +12,7 @@ sudo systemctl stop nginx
 
 
 
-#Feature list
+# Feature list
 Ticked off as programmed in
 - [ ] View the status of your gateway including internet connectivity, radio status and packet forwarder status.
 - [ ] Easily reboot the packet forwarder or entire gateway
@@ -25,7 +25,7 @@ Ticked off as programmed in
 - [ ] Packet statistics
 
 
-#Copyright notices
+# Copyright notices
 This program uses the following frameworks & libraries to operate:
 Bootstrap framework:
 Chart JS:

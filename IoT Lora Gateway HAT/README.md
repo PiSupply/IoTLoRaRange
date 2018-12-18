@@ -1,4 +1,4 @@
-#IoT LoRa Gateway HAT
+# IoT LoRa Gateway HAT
 This repository contains the documentation for the IoT LoRa Gateway HAT
 
 You can download the pre-build Raspberry Pi SD Card from
