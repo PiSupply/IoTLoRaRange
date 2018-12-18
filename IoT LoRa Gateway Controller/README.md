@@ -5,9 +5,9 @@ This will allow you to manage and setup your gateway over the network with a sim
 
 To access this program visit http://raspberrypi.local:4242
 
-This web app will run automatically as a service on boot. To disable it please run this command
+This web app is built using PHP and runs an NGINX Web server. To stop web server run the following command.
 ```
-sudo systemctl
+sudo systemctl stop nginx
 ```
 
 
@@ -22,3 +22,10 @@ Ticked off as programmed in
 - [ ] Set configuration options such as GPS Enabled, region etc
 - [ ] Controls the status LEDs
 - [ ] Run diagnostics program for support
+- [ ] Packet statistics
+
+
+#Copyright notices
+This program uses the following frameworks & libraries to operate:
+Bootstrap framework:
+Chart JS:
