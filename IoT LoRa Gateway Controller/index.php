@@ -40,24 +40,22 @@ $packetsTx = $ttnNocStatus["tx_in"];
 
 ?>
 <h1>IoT LoRa Gateway Status Page</h1>
-
-<div class="container">
-  <div class="row">
-    <div class="col-sm">
+<div class = "row">
+  <div class="ui grid">
+    <div class="eight wide column">
       <?php
       //Change the alert box's colour based on the status.
       if($internetStatus == 0) {
-        echo("<div class=\"card alert alert-success\">");
+        echo("<div class=\"ui positive message segment\">");
       }
       elseif($internetStatus == 3) {
-        echo("<div class=\"card alert alert-danger\">");
+        echo("<div class=\"ui error message segment\">");
       }
       else {
-        echo("<div class=\"card alert alert-warning\">");
+        echo("<div class=\"ui warning message segment\">");
       }
       ?>
 
-        <div class="card-body">
           <h4>Internet Connectivity</h3>
             <?php
             //Change the text based on the status.
@@ -72,69 +70,83 @@ $packetsTx = $ttnNocStatus["tx_in"];
               echo("One or more of the 3 sites we've tested against are producing no response indicating a potential outage");
             }
             ?>
-        </div>
       </div>
     </div>
-    <div class="col-sm">
+    <div class="eight wide column">
       <?php
       //Change the alert box's colour based on the status.
       if($packetForwarder == 1) {
-        echo("<div class=\"card alert alert-success\">");
+        echo("<div class=\"ui positive message segment\">");
       }
       else {
-        echo("<div class=\"card alert alert-danger\">");
+        echo("<div class=\"ui error message segment\">");
       }
        ?>
-        <div class="card-body">
           <h4>Packet Forwarder</h4>
           The packet forwarder service is <?php if($packetForwarder==0){echo("not ");}?>running.
-        </div>
       </div>
     </div>
-    <div class="col-sm">
-      <div class="card alert alert-info">
-        <div class="card-body">
+
+    <div class="three wide column">
+      <div class="ui info message segment">
           <h4>Uptime</h4>
           This gateway has been online for:<br/>
           <?php echo($uptime); ?>
-        </div>
       </div>
     </div>
+      </div>
   </div>
 </div>
-<div class="container">
+
   <div class="row">
-    <div class="col-sm alert alert-info">
+    <div class="ui one column stackable grid">
+      <div class="column">
+    <div class="ui positive message">
         <span class="font-weight-bold">Gateway IP Address:</span> <?php echo($gatewayIpAddress);?>
+    </div>
     </div>
   </div>
 </div>
-<div class="container">
+
   <div class="row">
-    <div class="col alert alert-info">
+    <div class="column">
+    <div class="ui positive message">
         <span class="font-weight-bold">Gateway ID:</span> ryanteck-ps-2
     </div>
   </div>
 </div>
 
-<div class="container">
+
   <div class="row">
-    <div class="col alert alert-info">
+    <div class="column">
+    <div class="ui positive message">
         <span class="font-weight-bold">Configured TTN Server:</span> router.eu.thethings.network
     </div>
   </div>
 </div>
 
+<div class="row">
 <div class="container">
-  <div class="row">
-    <div class="col-sm alert alert-info">
-        <span class="font-weight-bold">Packets Recieved:</span> <?php echo $packetsRx;?>
+  <h4>Packet Statistics</h4>
+<div class="ui statistics">
+  <div class="statistic">
+    <div class="value">
+      <i class="arrow down icon"></i> <?php echo $packetsRx;?>
     </div>
-    <div class="col-1">
+    <div class="label">
+      Recieved
     </div>
-    <div class="col-sm alert alert-info">
-        <span class="font-weight-bold">Packets Transmitted:</span> <?php echo $packetsTx;?>
+  </div>
+  <div class="statistic">
+    <div class="value">
+      <i class="arrow up icon"></i><?php echo $packetsTx;?>
     </div>
+    <div class="label">
+      Transmitted
+    </div>
+  </div>
+</div>
+
   </div>
 </div>
 
