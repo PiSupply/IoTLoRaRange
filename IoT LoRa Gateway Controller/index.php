@@ -9,7 +9,6 @@ include('inc/header.php');
 //Linux uptime
 $uptime = shell_exec('uptime -p');
 $packetForwarder = shell_exec('systemctl is-active iot-lora-gateway.service');
-var_dump($packetForwarder);
 if(strlen($packetForwarder) < 9) {
   $packetForwarder = 1;
 }
@@ -17,7 +16,6 @@ else {
 $packetForwarder = 0;
   }
 
-var_dump($packetForwarder);
 //Lets check for external internet connectivity by doing a http request to three servers
 $internetCheck1 = file_get_contents('http://www.google.com');
 $internetCheck2 = file_get_contents('https://status.thethings.network/');
@@ -33,6 +31,13 @@ if($internetCheck3 == FALSE) {
   $internetStatus++;
 }
 //If the number is greater than 0 then either one of the sites is down, if all three are down there is likely an internet issue.
+$gatewayIpAddress = getHostByName(getHostName());
+
+//Lets get the data from the NOC api
+$ttnNocStatus = json_decode(file_get_contents('http://noc.thethingsnetwork.org:8085/api/v2/gateways/ryanteck-rw-1'),true);
+$packetsRx = $ttnNocStatus["rx_ok"];
+$packetsTx = $ttnNocStatus["tx_in"];
+
 ?>
 <h1>IoT LoRa Gateway Status Page</h1>
 
@@ -100,7 +105,7 @@ if($internetCheck3 == FALSE) {
 <div class="container">
   <div class="row">
     <div class="col-sm alert alert-info">
-        <span class="font-weight-bold">Gateway IP Address:</span> 192.168.42.1
+        <span class="font-weight-bold">Gateway IP Address:</span> <?php echo($gatewayIpAddress);?>
     </div>
   </div>
 </div>
@@ -123,12 +128,12 @@ if($internetCheck3 == FALSE) {
 <div class="container">
   <div class="row">
     <div class="col-sm alert alert-info">
-        <span class="font-weight-bold">Packets Recieved:</span> 1024
+        <span class="font-weight-bold">Packets Recieved:</span> <?php echo $packetsRx;?>
     </div>
     <div class="col-1">
     </div>
     <div class="col-sm alert alert-info">
-        <span class="font-weight-bold">Packets Transmitted:</span> 32
+        <span class="font-weight-bold">Packets Transmitted:</span> <?php echo $packetsTx;?>
     </div>
   </div>
 </div>
