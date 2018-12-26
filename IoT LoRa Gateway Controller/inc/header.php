@@ -19,6 +19,9 @@ $configLocation = "/boot/iot-lora-gateway/local_conf.json";
     <link href="css/semantic.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
 
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/semantic.min.js"></script>
+
   </head>
 
 

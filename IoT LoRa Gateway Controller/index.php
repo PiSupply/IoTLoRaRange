@@ -38,9 +38,15 @@ $ttnNocStatus = json_decode(file_get_contents('http://noc.thethingsnetwork.org:8
 $packetsRx = $ttnNocStatus["rx_ok"];
 $packetsTx = $ttnNocStatus["tx_in"];
 
+$configHandler = fopen($configLocation, 'r');
+$currentConfig = fread($configHandler, filesize($configLocation));
+
+$jsonDecoded = json_decode($currentConfig,true)['gateway_conf'];
+$jsonServers = $jsonDecoded['servers'][0];
+
 ?>
 <h1>IoT LoRa Gateway Status Page</h1>
-
+<h2>Gateway ID: <?php echo($jsonServers['serv_gw_id']);?></h2>
 
 <div class="ui divided grid stackable">
 
@@ -59,7 +65,7 @@ $packetsTx = $ttnNocStatus["tx_in"];
       }
       ?>
 
-          <h4>Internet Connectivity</h3>
+          <h4>Internet Connectivity <i class="globe icon"></i></h3>
             <?php
             //Change the text based on the status.
 
@@ -85,14 +91,14 @@ $packetsTx = $ttnNocStatus["tx_in"];
         echo("<div class=\"ui error message segment\">");
       }
        ?>
-          <h4>Packet Forwarder</h4>
+          <h4>Packet Forwarder <i class="microchip icon"></i></h4>
           The packet forwarder service is <?php if($packetForwarder==0){echo("not ");}?>running.
       </div>
     </div>
 
     <div class="column wide">
       <div class="ui info message segment">
-          <h4>Uptime</h4>
+          <h4>Uptime <i class="calendar check icon"></i></h4>
           This gateway has been online for:<br/>
           <?php echo($uptime); ?>
       </div>
@@ -104,15 +110,7 @@ $packetsTx = $ttnNocStatus["tx_in"];
   <div class="row">
       <div class="column wide">
     <div class="ui positive message">
-        <span class="font-weight-bold">Gateway IP Address:</span> <?php echo($gatewayIpAddress);?>
-    </div>
-  </div>
-</div>
-
-  <div class="row">
-    <div class="column wide">
-    <div class="ui positive message">
-        <span class="font-weight-bold">Gateway ID:</span> ryanteck-ps-2
+        <strong>Gateway IP Address:</strong> <?php echo($gatewayIpAddress);?>
     </div>
   </div>
 </div>
@@ -121,37 +119,46 @@ $packetsTx = $ttnNocStatus["tx_in"];
   <div class="row">
     <div class="column">
     <div class="ui positive message">
-        <span class="font-weight-bold">Configured TTN Server:</span> router.eu.thethings.network 
+        <strong>Configured TTN Server:</strong> <?php echo($jsonServers['server_address']);?>
     </div>
   </div>
 </div>
+</div>
+<hr/>
+<br/>
+<div class="ui divided grid stackable centered">
 
-<div class="row">
-<div class="container">
-  <h4>Packet Statistics</h4>
+  <h2>Packet Statistics</h2>
+    <div class="two column row">
+      <div class="column wide">
 <div class="ui statistics">
   <div class="statistic">
     <div class="value">
       <i class="arrow down icon"></i> <?php echo $packetsRx;?>
     </div>
     <div class="label">
-      Recieved
+      Packets Recieved
     </div>
   </div>
+</div>
+</div>
+<div class="column wide">
+<div class="ui statistics">
   <div class="statistic">
     <div class="value">
       <i class="arrow up icon"></i><?php echo $packetsTx;?>
     </div>
     <div class="label">
-      Transmitted
+      Packets Transmitted
     </div>
   </div>
 </div>
 
   </div>
 </div>
+<h4>Packet statistics are from The Things Network Console</h4>
 </div>
-
+</div>
 
 <?php
 include('inc/footer.php');
