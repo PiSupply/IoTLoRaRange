@@ -1,4 +1,9 @@
+<?php
+//Global variables
 
+$configLocation = "/boot/iot-lora-gateway/local_conf.json";
+
+ ?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -22,7 +27,7 @@
     <header>
       <!-- Fixed navbar -->
       <div class="ui menu">
-        <div class="header item">IoTLoRaGateway Management</div>
+        <div class="header item"><img src="img/logo.png"/><pre> IoT LoRa Gateway Management</div>
         <a class="item" href="index.php">Gateway Status</a>
         <a class="item" href="configureGateway.php">Change Configuration</a>
         <a class="item" href="systemControls.php">System Controls</a>
@@ -32,4 +37,4 @@
 
 
 <!-- Begin page content -->
-<div class="ui grid container">
+<div class="ui container">

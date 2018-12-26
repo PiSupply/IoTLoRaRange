@@ -1,6 +1,10 @@
 header {
-  margin-bottom:1%;
+  margin-bottom:20px;
 }
 .ui.menu      {
   background-color:#7eca35;
+}
+
+.ui.button.fixedWidth {
+  min-width:200px;
 }

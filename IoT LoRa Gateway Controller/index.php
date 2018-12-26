@@ -40,9 +40,12 @@ $packetsTx = $ttnNocStatus["tx_in"];
 
 ?>
 <h1>IoT LoRa Gateway Status Page</h1>
-<div class = "row">
-  <div class="ui grid">
-    <div class="eight wide column">
+
+
+<div class="ui divided grid stackable">
+
+    <div class="three column row">
+    <div class="column wide">
       <?php
       //Change the alert box's colour based on the status.
       if($internetStatus == 0) {
@@ -72,7 +75,7 @@ $packetsTx = $ttnNocStatus["tx_in"];
             ?>
       </div>
     </div>
-    <div class="eight wide column">
+    <div class="column wide">
       <?php
       //Change the alert box's colour based on the status.
       if($packetForwarder == 1) {
@@ -87,7 +90,7 @@ $packetsTx = $ttnNocStatus["tx_in"];
       </div>
     </div>
 
-    <div class="three wide column">
+    <div class="column wide">
       <div class="ui info message segment">
           <h4>Uptime</h4>
           This gateway has been online for:<br/>
@@ -96,20 +99,18 @@ $packetsTx = $ttnNocStatus["tx_in"];
     </div>
       </div>
   </div>
-</div>
+<div class="ui divided grid stackable">
 
   <div class="row">
-    <div class="ui one column stackable grid">
-      <div class="column">
+      <div class="column wide">
     <div class="ui positive message">
         <span class="font-weight-bold">Gateway IP Address:</span> <?php echo($gatewayIpAddress);?>
-    </div>
     </div>
   </div>
 </div>
 
   <div class="row">
-    <div class="column">
+    <div class="column wide">
     <div class="ui positive message">
         <span class="font-weight-bold">Gateway ID:</span> ryanteck-ps-2
     </div>
@@ -120,7 +121,7 @@ $packetsTx = $ttnNocStatus["tx_in"];
   <div class="row">
     <div class="column">
     <div class="ui positive message">
-        <span class="font-weight-bold">Configured TTN Server:</span> router.eu.thethings.network
+        <span class="font-weight-bold">Configured TTN Server:</span> router.eu.thethings.network 
     </div>
   </div>
 </div>
@@ -149,7 +150,7 @@ $packetsTx = $ttnNocStatus["tx_in"];
 
   </div>
 </div>
-
+</div>
 
 
 <?php
