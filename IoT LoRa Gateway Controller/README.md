@@ -26,6 +26,7 @@ Ticked off as programmed in
 
 
 # Copyright notices
+This program is licensed under the GNU GPL V3 License, all files created by us are automatically under this license.
+
 This program uses the following frameworks & libraries to operate:
-Bootstrap framework:
-Chart JS:
+Symantic
