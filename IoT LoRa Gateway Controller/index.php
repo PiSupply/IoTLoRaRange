@@ -52,20 +52,48 @@ if($internetCheck3 == FALSE) {
 //If the number is greater than 0 then either one of the sites is down, if all three are down there is likely an internet issue.
 $gatewayIpAddress = getHostByName(getHostName());
 
-//Lets get the data from the NOC api
-$ttnNocStatus = json_decode(file_get_contents('http://noc.thethingsnetwork.org:8085/api/v2/gateways/ryanteck-rw-1'),true);
-$packetsRx = $ttnNocStatus["rx_ok"];
-$packetsTx = $ttnNocStatus["tx_in"];
-
 $configHandler = fopen($configLocation, 'r');
 $currentConfig = fread($configHandler, filesize($configLocation));
 
 $jsonDecoded = json_decode($currentConfig,true)['gateway_conf'];
 $jsonServers = $jsonDecoded['servers'][0];
+$gatewayConfigured = 1;
+if($jsonServers == NULL) {
+  $gatewayConfigured = 0;
+  $jsonServers['serv_gw_id'] = "GATEWAY CONFIG IS MISSING";
+}
+
+//Lets get the data from the NOC api
+$ttnNocStatus = json_decode(file_get_contents('http://noc.thethingsnetwork.org:8085/api/v2/gateways/'.trim($jsonServers['serv_gw_id'])),true);
+$packetsRx = $ttnNocStatus["rx_ok"];
+$packetsTx = $ttnNocStatus["tx_in"];
+
+
 
 ?>
 <h1>IoT LoRa Gateway Status Page</h1>
 <h2>Gateway ID: <?php echo($jsonServers['serv_gw_id']);?></h2>
+
+<?php
+if($gatewayConfigured == 0) {
+  echo '
+  <div class="ui divided grid stackable">
+    <div class="row">
+        <div class="column wide">
+      <div class="ui error message">
+          <h3>Gateway Is Not Configured!</h3>
+          There is no configuration file detected for this gateway. Please use the change configuration tab to configure this gateway.
+      </div>
+    </div>
+  </div>
+  </div>
+
+   ';
+}
+
+
+ ?>
+
 
 <div class="ui divided grid stackable">
 

@@ -26,6 +26,8 @@ include('inc/header.php');
 
 var_dump($_GET['butt']);
 
+$response = shell_exec('sudo systemctl restart iot-lora-gateway.service');
+var_dump($response);
 ?>
 
 <script>

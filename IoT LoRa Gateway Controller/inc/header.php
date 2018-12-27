@@ -20,7 +20,7 @@
 
 //Global variables
 
-$configLocation = "/boot/iot-lora-gateway/local_conf.json";
+$configLocation = "/opt/iotloragateway/local_conf.json";
 
  ?>
 <!doctype html>
