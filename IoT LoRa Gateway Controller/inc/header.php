@@ -35,6 +35,7 @@ $configLocation = "/opt/iotloragateway/local_conf.json";
     <title>IoTLoRaGateway Management</title>
 
     <!-- Bootstrap core CSS -->
+
     <link href="css/semantic.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
 
@@ -49,10 +50,10 @@ $configLocation = "/opt/iotloragateway/local_conf.json";
     <header>
       <!-- Fixed navbar -->
       <div class="ui menu">
-        <div class="header item"><img src="img/logo.png"/><pre> IoT LoRa Gateway Management</div>
-        <a class="item" href="index.php">Gateway Status</a>
-        <a class="item" href="configureGateway.php">Change Configuration</a>
-        <a class="item" href="systemControls.php">System Controls</a>
+        <div class="header item"><img id="logo" src="img/logo.png"/></div>
+        <a class="item menuButt" href="index.php"><strong>Gateway Status</strong></a>
+        <a class="item menuButt" href="configureGateway.php"><strong>Change Configuration</strong></a>
+        <a class="item menuButt" href="systemControls.php"><strong>System Controls</strong></a>
 </div>
 
     </header>

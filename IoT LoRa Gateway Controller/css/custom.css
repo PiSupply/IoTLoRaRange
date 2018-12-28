@@ -2,9 +2,19 @@ header {
   margin-bottom:20px;
 }
 .ui.menu      {
-  background-color:#7eca35;
+  background-color:#8bc34a;
 }
 
 .ui.button.fixedWidth {
   min-width:200px;
+}
+#logo{
+  width:100%;
+}
+.menuButt {
+  color:#ffffff !important;
+}
+.ui.statistics>.statistic {
+  margin-left:auto;
+  margin-right:auto;
 }

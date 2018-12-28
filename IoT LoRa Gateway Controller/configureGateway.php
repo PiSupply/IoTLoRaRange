@@ -59,20 +59,9 @@ $jsonServers = $jsonDecoded['servers'][0];
        <label for="emailAddr"  >TTN Gateway Key:</label> This is the Gateway Key from the TTN Console
        <input type="text" id="ttnKey"name="ttnKey" class="form-control" required minlength=101 <?php if($jsonServers['serv_gw_key']!=null) { echo "value='".$jsonServers['serv_gw_key']."'"; }?>/>
        </div>
-      <div class="field">
-       <label for="emailAddr"  >Altitude:</label> Approximate altitude of the Gateway.
-       <input type="text" id="altitude" name="altitude" class="form-control" required <?php if($jsonDecoded['ref_altitude']!=null) { echo "value='".$jsonDecoded['ref_altitude']."'"; }?>/>
-       </div>
        <div class="field">
-        <label for="emailAddr"  >Latitude:</label> Latitude of the Gateway's Location.
-        <input type="text" id="latitude" name="latitude" class="form-control" required <?php if($jsonDecoded['ref_latitude']!=null) { echo "value='".$jsonDecoded['ref_latitude']."'"; }?>/>
-        </div>
-      <div class="field">
-       <label for="emailAddr"  >Longitude:</label> Longitude of the Gateway's Location.
-       <input type="text" id="longitude" name="longitude" class="form-control" required <?php if($jsonDecoded['ref_longitude']!=null) { echo "value='".$jsonDecoded['ref_longitude']."'"; }?>/>
-       </div>
-
-       <p>A handy tool for this is https://www.latlong.net/convert-address-to-lat-long.html</p>
+        <label for="emailAddr"  >Location:</label> The location is retrieved from TTN and will use the address specified in the console when you click update.
+      </div>
       <div class="field">
        <label for="router"  >TTN Router:</label>
        <select name="router" class="form-control">

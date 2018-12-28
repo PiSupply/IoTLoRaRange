@@ -14,15 +14,15 @@ sudo systemctl stop nginx
 
 # Feature list
 Ticked off as programmed in
-- [X] View the status of your gateway including internet connectivity, radio status and packet forwarder status.
-- [X] Easily reboot the packet forwarder or entire gateway
-- [X] Configure the gateway's ID, Keys, Routers etc
+- [ ] View the status of your gateway including internet connectivity, radio status and packet forwarder status.
+- [ ] Easily reboot the packet forwarder or entire gateway
+- [ ] Configure the gateway's ID, Keys, Routers etc
 - [ ] Check the temperature of your Gateway (Using SOCs Temperature sensor)
 - [ ] Authentication that uses Linux user & password
 - [ ] Set configuration options such as GPS Enabled, region etc
 - [ ] Controls the status LEDs
 - [ ] Run diagnostics program for support
-- [X] Packet statistics
+- [ ] Packet statistics
 
 
 # Copyright notices

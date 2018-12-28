@@ -32,8 +32,8 @@ include('inc/header.php');
         <strong>Restart Packet Forwarder:</strong> This'll restart the packet forwarder service. Usually required after modifying the configuration file.
 
 </div>
-<div class="ui warning message">
-    <a href="runCommand.php?butt=diag"  class="ui violet big button fluid">Run Diagnostics</a>
+<div class="ui message">
+    <a href="#"  class="ui inactive big button fluid">Run Diagnostics</a>
         <strong>Run diagnostics program:</strong> Run a quick diagnostics program on the gateway to check for hardware errors.
 
 </div>

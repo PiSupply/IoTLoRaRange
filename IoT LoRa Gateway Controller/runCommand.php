@@ -24,13 +24,39 @@ include('inc/header.php');
 
 //Get the command ran
 
-var_dump($_GET['butt']);
+$buttonPressed = $_GET['butt'];
 
-$response = shell_exec('sudo systemctl restart iot-lora-gateway.service');
-var_dump($response);
+
 ?>
 
 <script>
+<?php
+if($buttonPressed == "rstPkt") {
+  //Restart the packet forwarder
+  echo("var timePerTick = 300;");
+}
+else if($buttonPressed == "stpPkt") {
+  //Restart the packet forwarder
+  echo("var timePerTick = 300;");
+}
+else if($buttonPressed == "strPkt") {
+  //Restart the packet forwarder
+  echo("var timePerTick = 300;");
+}
+else if($buttonPressed == "diag") {
+  //Restart the packet forwarder
+  //shell_exec("sudo systemctl start iot-lora-gateway.service");
+}
+else if($buttonPressed == "rbtSys") {
+  //Restart the packet forwarder
+  echo("var timePerTick = 1200;");
+}
+else if($buttonPressed == "sdSys") {
+  //Restart the packet forwarder
+    echo("var timePerTick = 300;");
+}
+?>
+
 var restartCounter = 0;
 var countdownTimer = window.setInterval(function () {
   restartCounter = restartCounter + 1;
@@ -44,12 +70,75 @@ var countdownTimer = window.setInterval(function () {
   $('#progressBar').progress({percent: restartCounter,text: {
       active  : '{percent}%'
     }});
-}, 600);
+}, timePerTick);
 </script>
 
 <h1>IoT LoRa Gateway Command</h1>
+
+<?php
+
+if($buttonPressed == "rstPkt") {
+  //Restart the packet forwarder
+  echo("<h2>The Packet Forwader Is Restarting</h2>  <p>This may take around 30 Seconds</p>");
+}
+else if($buttonPressed == "stpPkt") {
+  //Restart the packet forwarder
+  echo("<h2>The Packet Forwader Is Starting</h2>  <p>This may take around 30 Seconds</p>");
+}
+else if($buttonPressed == "strPkt") {
+  //Restart the packet forwarder
+  echo("<h2>The Packet Forwader Is Stopping</h2> <p>This may take around 30 Seconds</p>");
+}
+else if($buttonPressed == "diag") {
+  //Restart the packet forwarder
+  //shell_exec("sudo systemctl start iot-lora-gateway.service");
+}
+else if($buttonPressed == "rbtSys") {
+  //Restart the packet forwarder
+  echo("<h2>The gateway is restarting</h2> <p>This may take around 2 Minutes</p>");
+}
+else if($buttonPressed == "sdSys") {
+  //Restart the packet forwarder
+  echo("<h2>The gateway is shutting down.</h2>");
+}
+
+ ?>
+
 <div class="ui indicating progress" id="progressBar">
   <div class="bar"></div>
 
   <div class="label">0%</div>
 </div>
+
+<?php
+include("inc/footer.php");
+
+if($buttonPressed == "rstPkt") {
+  //Restart the packet forwarder
+  shell_exec("sudo systemctl restart iot-lora-gateway.service");
+}
+else if($buttonPressed == "stpPkt") {
+  //Restart the packet forwarder
+  shell_exec("sudo systemctl stop iot-lora-gateway.service");
+}
+else if($buttonPressed == "strPkt") {
+  //Restart the packet forwarder
+  shell_exec("sudo systemctl start iot-lora-gateway.service");
+}
+else if($buttonPressed == "diag") {
+  //Restart the packet forwarder
+  //shell_exec("sudo systemctl start iot-lora-gateway.service");
+}
+else if($buttonPressed == "rbtSys") {
+  //Restart the packet forwarder
+  shell_exec("sudo shutdown -r +1");
+}
+else if($buttonPressed == "sdSys") {
+  //Restart the packet forwarder
+  shell_exec("sudo shutdown -h +1");
+}
+
+
+
+
+ ?>
