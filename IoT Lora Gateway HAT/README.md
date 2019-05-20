@@ -48,7 +48,7 @@ home automation etc.
 * Any other Raspberry Pi with 40 GPIO Pins
 
 ## Hardware
-![IoT-LoRa-Gateway-HAT-Top-No-Module_1024x](https://user-images.githubusercontent.com/1878314/57860384-b7bb3f80-77ec-11e9-8ae0-2a91bca9f24a.png)
+![IoT-LoRa-Gateway-HAT-Top](https://user-images.githubusercontent.com/1878314/57860384-b7bb3f80-77ec-11e9-8ae0-2a91bca9f24a.png)
 
 ```text
 GPIO

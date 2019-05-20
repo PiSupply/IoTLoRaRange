@@ -20,7 +20,7 @@ Our IoT LoRa Gateway HAT allows you to create an inexpensive LoRa gateway, compa
 The IoT LoRa Gateway HAT utilises the RAKWireless RAK833 mPCIe LoRa gateway concentrator module which is based on Semtech SX1301 LoRa technology and provides a fully LoRaWAN Compliant gateway listening on 8 channels at the same time.
 
 Our LoRa Gateway HAT Designed to allow you to make a DIY LoRa Gateway at a great budget with the Raspberry Pi or other compatible SBC.
-https://uk.pi-supply.com/products/iot-lora-gateway-hat-for-raspberry-pi
+[https://uk.pi-supply.com/products/iot-lora-gateway-hat-for-raspberry-pi](https://uk.pi-supply.com/products/iot-lora-gateway-hat-for-raspberry-pi)
 
 
 ### IoT LoRa Smart Gateway
@@ -41,7 +41,7 @@ The board can be configured to use either of the two different frequencies liste
 
 Our LoRa Node designed for use with Raspberry Pi
 Compatible with Python
-https://uk.pi-supply.com/products/iot-lora-node-phat-for-raspberry-pi
+[https://uk.pi-supply.com/products/iot-lora-node-phat-for-raspberry-pi](https://uk.pi-supply.com/products/iot-lora-node-phat-for-raspberry-pi)
 
 ### IoT LoRa Arduino Shield
 ![IoT-LoRa-Arduino-Shield-Top_1024x (1)](https://user-images.githubusercontent.com/1878314/57806742-ad029b00-7757-11e9-994e-9c1a0afc77f0.png)
@@ -54,7 +54,7 @@ The board can be configured to use either of the two different frequencies liste
 * 915 MHz
 
 Our LoRa Node designed for use with Arduino
-https://uk.pi-supply.com/products/iot-lora-node-shield
+[https://uk.pi-supply.com/products/iot-lora-node-shield](https://uk.pi-supply.com/products/iot-lora-node-shield)
 
 ### IoT LoRa micro:bit Node
 ![IoT-LoRa-Node-microbit-Top_1024x](https://user-images.githubusercontent.com/1878314/57850762-ac5d1980-77d6-11e9-9197-1018c69ea42f.png)
@@ -70,7 +70,7 @@ The board can be configured to use either of the two different frequencies liste
 
 Our LoRa Node designed for use with the micro:bit
 Compatible with Microsoft Makecode
-https://uk.pi-supply.com/products/iot-micro-bit-lora-node
+[https://uk.pi-supply.com/products/iot-micro-bit-lora-node](https://uk.pi-supply.com/products/iot-micro-bit-lora-node)
 
 ## Reviews and Links
 
@@ -80,3 +80,8 @@ https://uk.pi-supply.com/products/iot-micro-bit-lora-node
 ## Projects
 
 Coming soon!
+
+## LoRa Alliance Member
+![Alliance_member_horiz_CMYK_150dpi](https://user-images.githubusercontent.com/1878314/58036007-efdebd00-7b21-11e9-9ee2-0a251b191bbf.png)
+
+Pi Supply is a proud member of the LoRa Alliance. The LoRa Alliance is an open, non-profit association of members that are actively developing and deploying IoT solutions. Alliance members will collaborate to drive the global success of the LoRaWAN protocol, by sharing knowledge and experience to guarantee interoperability between operators in one open global standard.
