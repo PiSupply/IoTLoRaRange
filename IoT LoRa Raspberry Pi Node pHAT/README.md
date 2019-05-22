@@ -71,9 +71,10 @@ o Available
 GPS I2C
 --------------------------------
 | 1     2     3     4     5    |
-|PPS    Rx    Tx    GND   VCC  |
+|VCC    SDA  SCL  GPIO4   GND  |
 --------------------------------
 ```
+This is the same as the first 5 pins from 3v3 to GND on the Raspberry Pi
 
 ```text
 RAK811 Breakout U$3
@@ -84,4 +85,4 @@ RAK811 Breakout U$3
 ```
 
 ## Software
-The software library for the LoRa pHAT can be found at the following GitHub URL - [https://github.com/PiSupply/rak811-python](https://github.com/PiSupply/rak811-python)
+The software library for the LoRa pHAT can be found at the following GitHub URL - [https://github.com/AmedeeBulle/pyrak811](https://github.com/AmedeeBulle/pyrak811)
