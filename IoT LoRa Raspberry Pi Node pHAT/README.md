@@ -71,9 +71,10 @@ o Available
 GPS I2C
 --------------------------------
 | 1     2     3     4     5    |
-|PPS    Rx    Tx    GND   VCC  |
+|VCC    SDA  SCL  GPIO4   GND  |
 --------------------------------
 ```
+This is the same as the first 5 pins from 3v3 to GND on the Raspberry Pi
 
 ```text
 RAK811 Breakout U$3
@@ -92,6 +93,6 @@ There are two antennas, which can be used with the nodes. By default the interna
 **Important** If you wish for your node to comply with the LoRaWAN Certification and CE/FCC Certification then you must use the internal antenna only.
 
 ## Software
-The software library for the LoRa pHAT can be found at the following GitHub URL - [https://github.com/PiSupply/rak811-python](https://github.com/PiSupply/rak811-python)
+The software library for the LoRa pHAT can be found at the following GitHub URL - [https://github.com/AmedeeBulle/pyrak811](https://github.com/AmedeeBulle/pyrak811)
 
-Here is a guide on the MakerZone to get started - [https://learn.pi-supply.com/make/getting-started-with-the-raspberry-pi-lora-node-phat/](https://learn.pi-supply.com/make/getting-started-with-the-raspberry-pi-lora-node-phat/)
+The software library for the LoRa pHAT can be found at the following GitHub URL - [https://github.com/AmedeeBulle/pyrak811](https://github.com/AmedeeBulle/pyrak811)
