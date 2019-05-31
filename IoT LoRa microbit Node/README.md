@@ -62,7 +62,15 @@ RAK811 Breakout U$3
 |3V3   PA13  PA14  PA15  PB3   PB5   PB8   PB9   PA2   GND    |
 ---------------------------------------------------------------
 ```
+## Antenna
+![IoT-LoRa-Node-microbit-Top_1024x-2](https://user-images.githubusercontent.com/1878314/58700166-45735f00-8397-11e9-9612-d2a22d5cedf2.png)
+
+There are two antennas, which can be used with the nodes. By default the internal antenna is in use as indicated by the inductor soldered to the INT solder pads. If you wish to use the external antenna connector then you will need to de-solder the inductor on the INT solder pads and solder this or bridge the EXT solder pads.
+
+**NOTE:** If both solder pads for the antenna are connected then there is a significant reduction in antenna range for both internal and external antennas.
+
+**Important** If you wish for your node to comply with the LoRaWAN Certification and CE/FCC Certification then you must use the internal antenna only.
 
 ## Software
 
-We have a comprehensive getting started guide, which shows you how to setup and program your micro:bit node using Microsoft's Makecode - [https://learn.pi-supply.com/make/getting-started-with-the-microbit-lora-node/](https://learn.pi-supply.com/make/getting-started-with-the-microbit-lora-node/) This guide also shows users how to configure a node in the TTN console. 
+We have a comprehensive getting started guide, which shows you how to setup and program your micro:bit node using Microsoft's Makecode - [https://learn.pi-supply.com/make/getting-started-with-the-microbit-lora-node/](https://learn.pi-supply.com/make/getting-started-with-the-microbit-lora-node/) This guide also shows users how to configure a node in the TTN console.

@@ -40,7 +40,7 @@ The board can be configured to use either of the two different frequencies liste
 * Raspberry Pi Zero W
 * Any other Raspberry Pi with 40 GPIO Pins
 
-## hardware
+## Hardware
 ![https://user-images.githubusercontent.com/1878314/57806506-2948ae80-7757-11e9-941f-a43fef9c4b51.png](https://user-images.githubusercontent.com/1878314/57806506-2948ae80-7757-11e9-941f-a43fef9c4b51.png)
 
 ```text
@@ -82,6 +82,16 @@ RAK811 Breakout U$3
 |3V3   PA13  PA14  PA15  PB3   PB5   PB8   PB9   PA2   GND    |
 ---------------------------------------------------------------
 ```
+## Antenna
+![IoT-LoRa-Node-microbit-Top_1024x-2](https://user-images.githubusercontent.com/1878314/58700166-45735f00-8397-11e9-9612-d2a22d5cedf2.png)
+
+There are two antennas, which can be used with the nodes. By default the internal antenna is in use as indicated by the inductor soldered to the INT solder pads. If you wish to use the external antenna connector then you will need to de-solder the inductor on the INT solder pads and solder this or bridge the EXT solder pads.
+
+**NOTE:** If both solder pads for the antenna are connected then there is a significant reduction in antenna range for both internal and external antennas.
+
+**Important** If you wish for your node to comply with the LoRaWAN Certification and CE/FCC Certification then you must use the internal antenna only.
 
 ## Software
 The software library for the LoRa pHAT can be found at the following GitHub URL - [https://github.com/PiSupply/rak811-python](https://github.com/PiSupply/rak811-python)
+
+Here is a guide on the MakerZone to get started - [https://learn.pi-supply.com/make/getting-started-with-the-raspberry-pi-lora-node-phat/](https://learn.pi-supply.com/make/getting-started-with-the-raspberry-pi-lora-node-phat/)
