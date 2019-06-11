@@ -94,5 +94,3 @@ There are two antennas, which can be used with the nodes. By default the interna
 
 ## Software
 The software library for the LoRa pHAT can be found at the following GitHub URL - [https://github.com/AmedeeBulle/pyrak811](https://github.com/AmedeeBulle/pyrak811)
-
-The software library for the LoRa pHAT can be found at the following GitHub URL - [https://github.com/AmedeeBulle/pyrak811](https://github.com/AmedeeBulle/pyrak811)
