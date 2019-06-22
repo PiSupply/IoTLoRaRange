@@ -32,14 +32,36 @@ The board can be configured to use either of the two different frequencies liste
 * Energy Metering
 
 **Compatible with:**
-* Raspberry Pi A+
-* Raspberry Pi B+
-* Raspberry Pi 2B
-* Raspberry Pi 3B
-* Raspberry Pi 3B+
-* Raspberry Pi Zero
-* Raspberry Pi Zero W
-* Any other Raspberry Pi with 40 GPIO Pins
+* Arduino Uno
+* Arduino Nano
+* Arduino Mega
+* Most Arduino Compatibles
+
+
+
+## Hardware
+
+
+```text
+GPIO
+--------------------------------------------------------------------------------------------
+| Aref     GND     13     12    11     10    9    8    7    6    5    4    3    2    1     |
+|  o       GND      o     #      #      #    o     o   o    o    o    o    o    o    o     |
+--------------------------------------------------------------------------------------------
+
+No pins apart from 3V is used on the other side of the board.
+
+# Used
+o Available
+
+3 SDA1 I2C connected to JP1
+5 SCL1 I2C connected to JP1
+7 GPIO 4 connected to JP1
+10 Tx Connects to Rx on RAK811 module
+11 Rx Connects to Tx on RAK811 module
+12 Reset pin
+
+```
 
 ```text
 GPS I2C
