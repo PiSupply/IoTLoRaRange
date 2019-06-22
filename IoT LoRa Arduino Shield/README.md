@@ -54,9 +54,9 @@ No pins apart from 3V is used on the other side of the board.
 # Used
 o Available
 
-3 SDA1 I2C connected to JP1
-5 SCL1 I2C connected to JP1
-7 GPIO 4 connected to JP1
+A4 SDA1 I2C connected to JP1
+A5 SCL1 I2C connected to JP1
+A3 A3 connected to JP1
 10 Tx Connects to Rx on RAK811 module
 11 Rx Connects to Tx on RAK811 module
 12 Reset pin
