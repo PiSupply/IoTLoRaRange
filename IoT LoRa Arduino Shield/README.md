@@ -92,3 +92,18 @@ Some units were sent out with both connected so for best performance unsolder th
 ## Software
 
 For the Arduino library please see the repository at https://github.com/PiSupply/rak811-arduino
+
+##US915 NOTE
+You may experience issues with US915 and AU915 depending on the regional configuration and gateway coverage. As standard up to 64 channels are set as default.
+
+For the things network we recommend that you set the following configuration lines as these will disable all but the 8 that TTN is setup to use.
+
+To set the configuration it's recommended that you send it via the serial passthrough and serial terminal.
+
+```
+at+set_config=ch_mask:0,FF00
+at+set_config=ch_mask:1,0000
+at+set_config=ch_mask:2,0000
+at+set_config=ch_mask:3,0000
+at+set_config=ch_mask:4,0000
+```

@@ -95,3 +95,16 @@ Some units were sent out with both connected so for best performance unsolder th
 
 ## Software
 The software library for the LoRa pHAT can be found at the following GitHub URL - [https://github.com/AmedeeBulle/pyrak811](https://github.com/AmedeeBulle/pyrak811)
+
+##US915 NOTE
+You may experience issues with US915 and AU915 depending on the regional configuration and gateway coverage. As standard up to 64 channels are set as default.
+
+For the things network we recommend that you set the following configuration lines as these will disable all but the 8 that TTN is setup to use:
+
+```
+lora.set_config(ch_mask = '0,FF00')
+lora.set_config(ch_mask = '1,0000')
+lora.set_config(ch_mask = '2,0000')
+lora.set_config(ch_mask = '3,0000')
+lora.set_config(ch_mask = '4,0000')
+```

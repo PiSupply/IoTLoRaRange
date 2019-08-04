@@ -75,3 +75,11 @@ Some units were sent out with both connected so for best performance unsolder th
 ## Software
 
 We have a comprehensive getting started guide, which shows you how to setup and program your micro:bit node using Microsoft's Makecode - [https://learn.pi-supply.com/make/getting-started-with-the-microbit-lora-node/](https://learn.pi-supply.com/make/getting-started-with-the-microbit-lora-node/) This guide also shows users how to configure a node in the TTN console.
+
+
+##US915 NOTE
+You may experience issues with US915 and AU915 depending on the regional configuration and gateway coverage. As standard up to 64 channels are set as default.
+
+For the things network we recommend that you set the following configuration lines as these will disable all but the 8 that TTN is setup to use.
+
+For the micro:bit node we have set this into the US915 code manually.
