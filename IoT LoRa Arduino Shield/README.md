@@ -40,7 +40,7 @@ The board can be configured to use either of the two different frequencies liste
 
 
 ## Hardware
-
+![LoRa-Node-Shield-Top_1024x](https://user-images.githubusercontent.com/1878314/62480748-f7247700-b7b0-11e9-9fab-0b288486d2a4.png)
 
 ```text
 GPIO

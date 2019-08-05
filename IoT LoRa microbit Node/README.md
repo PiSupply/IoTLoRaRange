@@ -26,7 +26,7 @@ The board can be configured to use either of the two different frequencies liste
 Compatible with BBC micro:bit only
 
 ## Hardware
-![BBC micr:bit LoRa Node](https://user-images.githubusercontent.com/1878314/57850762-ac5d1980-77d6-11e9-9197-1018c69ea42f.png)
+![1_c8ead82b-d3e0-4c66-b121-c168c0e26f7b_1024x](https://user-images.githubusercontent.com/1878314/62480740-f390f000-b7b0-11e9-9f4d-94cecb9655f9.png)
 
 ```text
 micro:bit edge connector

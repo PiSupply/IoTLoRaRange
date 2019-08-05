@@ -41,7 +41,7 @@ The board can be configured to use either of the two different frequencies liste
 * Any other Raspberry Pi with 40 GPIO Pins
 
 ## Hardware
-![https://user-images.githubusercontent.com/1878314/57806506-2948ae80-7757-11e9-941f-a43fef9c4b51.png](https://user-images.githubusercontent.com/1878314/57806506-2948ae80-7757-11e9-941f-a43fef9c4b51.png)
+![1_516121d5-d075-4418-b6bd-36dbc977280e_1024x](https://user-images.githubusercontent.com/1878314/62480754-f986d100-b7b0-11e9-991c-7bbf8dfb3866.png)
 
 ```text
 GPIO
