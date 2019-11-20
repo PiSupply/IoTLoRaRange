@@ -54,7 +54,7 @@ home automation etc.
 GPIO
 -----------------------------------------------------------------------------------------------------------------------
 | 2     4     6     8    10     12    14    16    18    20    22    24    26    28    30    32    34    36    38    40 |
-|5V     5V    GND   o     o     o     GND   o     o     GND   o     #     #     o     GND   o     GND   o     o     o  |
+|5V     5V    GND   +     +     o     GND   o     o     GND   o     #     #     o     GND   o     GND   o     o     o  |
 |3V3    o     #     o     GND   o     o     #     3V3   #     #     #     GND   o     o     o     o     o     o     GND|
 | 1     3     5     7     9     11    13    15    17    19    21    23    25    27    29    31    33    35    37    39 |
 -----------------------------------------------------------------------------------------------------------------------
@@ -63,14 +63,18 @@ GPIO
 o Available
 + Can be reused
 
+8 TXD *
+10 RXD *
 15 Reset
 19 MOSI
 21 MISO
 23 SCLK
 24 CE0 chip select 0
-26 CE1 chip select 1
+26 CE1 chip select 1*
 
 ```
+* 8 & 10 are used if the GPS module is plugged into the HAT.
+** While CE1 is not in use, with the LoRa Module we do not recommend using two SPI devices on the same bus.
 
 ```text
 GPS UART
