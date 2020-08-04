@@ -5,8 +5,8 @@ After=containerd.service
 [Service]
 Type=simple
 WorkingDirectory=/opt/iotloragateway/
-ExecStartPre=/opt/iotloragateway/iot-lora-gw-docker/reset-22.sh
-ExecStart=/opt/iotloragateway/iot-lora-gw-docker/mp_pkt_fwd
+ExecStartPre=/opt/iotloragateway/reset-22.sh
+ExecStart=/opt/iotloragateway/mp_pkt_fwd
 Restart=always
 RestartSec=10
 
