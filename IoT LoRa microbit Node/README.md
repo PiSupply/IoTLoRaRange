@@ -65,7 +65,7 @@ RAK811 Breakout U$3
 ## Antenna
 ![IoT-LoRa-Node-microbit-Top_1024x-2](https://user-images.githubusercontent.com/1878314/58700166-45735f00-8397-11e9-9612-d2a22d5cedf2.png)
 
-There are two antennas, which can be used with the nodes. By default the internal antenna is in use as indicated by the inductor soldered to the INT solder pads. If you wish to use the external antenna connector then you will need to de-solder the inductor on the INT solder pads and solder this or bridge the EXT solder pads.
+There are two antennas, which can be used with the nodes. By default the internal antenna is in use as indicated by the inductor soldered to the INT solder pads. If you wish to use the external antenna connector then you will need to de-solder the inductor ([Murata LQP03TN18NH02D](https://www.murata.com/en-eu/products/productdetail?partno=LQP03TN18NH02%23)) on the INT solder pads and solder this or bridge the EXT solder pads.
 
 **NOTE:** If both solder pads for the antenna are connected then there is a significant reduction in antenna range for both internal and external antennas.
 Some units were sent out with both connected so for best performance unsolder the inductor for the one you wish to use.
