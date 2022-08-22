@@ -4,9 +4,9 @@ This guide will help you update your Pi Supply LoRa Gateway HAT to be compatible
 
 ## What you will need
 
-Pi Supply LoRa Gateway HAT
-Raspberry Pi
-Raspbian Lite OS
+* Pi Supply LoRa Gateway HAT
+* Raspberry Pi
+* Raspbian Lite OS
 
 ## Installation procedure
 
@@ -24,7 +24,7 @@ In the menu, select “Interfaces” and enable SPI and I2C. Once you have enabl
 sudo apt update; sudo apt install git -y
 ```
 ```
-Sudo git clone https://github.com/ChristopherRush/rak_common_for_gateway.git
+sudo git clone https://github.com/ChristopherRush/rak_common_for_gateway.git
 ```
 ```
 cd rak_common_for_gateway/lora
