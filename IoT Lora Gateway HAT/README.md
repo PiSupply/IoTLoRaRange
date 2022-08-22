@@ -106,6 +106,8 @@ RAK833 mPCIe
 ```
 
 ## Software
-Please see the following link on how to download and install the software to setup the Gateway - [https://learn.pi-supply.com/make/iot-lora-gateway-sd-card-image-setup/](https://learn.pi-supply.com/make/iot-lora-gateway-sd-card-image-setup/)
+~~Please see the following link on how to download and install the software to setup the Gateway - [https://learn.pi-supply.com/make/iot-lora-gateway-sd-card-image-setup/](https://learn.pi-supply.com/make/iot-lora-gateway-sd-card-image-setup/)
 
-Here is the link to the download the pre-compiled OS image, which will still need some minor configuration - [http://pisupp.ly/iotsd](http://pisupp.ly/iotsd)
+Here is the link to the download the pre-compiled OS image, which will still need some minor configuration - [http://pisupp.ly/iotsd](http://pisupp.ly/iotsd)~~
+
+The Pi Supply Gateway software is now redundant since the update from TTN v2 to TTN v3. Please follow the guide here - https://github.com/PiSupply/IoTLoRaRange/blob/master/IoT%20Lora%20Gateway%20HAT/Software.md
