@@ -55,15 +55,21 @@ GPIO
 # Used
 o Available
 
-3 SDA1 I2C connected to JP1
-5 SCL1 I2C connected to JP1
-7 GPIO 4 connected to JP1
-8 Tx Connects to Rx on RAK811 module
-10 Rx Connects to Tx on RAK811 module
-11 GPIO 17 Reset pin
-27 ID SD EEPROM
-28 ID SC EEPROM
-37 ID WP EEPROM
+Communications Pins:
+- 3 SDA1 I2C connected to JP1
+- 5 SCL1 I2C connected to JP1
+- 7 GPIO 4 connected to JP1
+- 8 Tx Connects to Rx on RAK811 module
+- 10 Rx Connects to Tx on RAK811 module
+- 11 GPIO 17 Reset pin
+- 27 ID SD EEPROM
+- 28 ID SC EEPROM
+- 37 ID WP EEPROM
+
+Voltage and Ground Pins:
+- 1 3.3V
+- 9 GND
+- 25 GND
 
 ```
 
